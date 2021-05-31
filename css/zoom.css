@@ -1,0 +1,91 @@
+
+
+.wrapper {
+ height: auto;
+    max-width: 100%;
+    text-align: center;
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.right {float: left !important;}
+/* Image zoom on hover + Overlay colour */
+.parent {
+    width: 90%;
+    margin: 20px;
+    height: 400px;
+    border: 1px solid blue;
+    overflow: hidden;
+    position: relative;
+
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+}
+
+.child {
+    height: 100%;
+    width: 100%;
+    font-size: 11px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: transform 1s, filter 2s ease-in-out;
+  filter: blur(2px);
+  transform: scale(1.2);
+}
+
+/* Several different images */
+.bg-one {background-image: url("/image/screen/190M.png");}
+.bg-two {background-image: url('/image/screen/no\ pool.png');}
+.bg-three {background-image: url('/image/screen/120M-with\ pool.png');}
+.bg-four {background-image: url('/image/screen/200M.png');}
+.bg-five {background-image: url('/image/screen/120M.png');}
+.bg-six {background-image: url('/image/screen/200M-with\ pool.png');}
+
+
+.parent a{
+    font-size: 20px;
+    color: #ffffff !important;
+    font-family: sans-serif;
+    margin-bottom:5%;
+    margin-left: 10%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    cursor: pointer;
+   
+}
+
+.parent:hover .child, .parent:focus .child {
+    transition: transform 2s, filter 1.5s ease-in-out;
+    filter: blur(0);
+    transform: scale(1);
+}
+
+.parent:hover .child:before, .parent:focus .child:before {
+    display: block;
+}
+
+.parent:hover a, .parent:focus a {
+    display: block;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+    .parent {width: 100%; margin: 20px 0px}
+        .wrapper {padding: 20px 20px;}
+}
+
+
+
+
+.hello {display: none}
+
+
